@@ -32,15 +32,15 @@ class Counter extends React.Component {
     }
 
     return (
-      <div>
-        <h4 style={color}>{this.state.counter}</h4>
+      <div className="counter">
+        <h4 className="count" style={color}>{this.state.counter}</h4>
         <br />
-        <a href="*" onClick={this.handleButtonClick}>
+        <a className="up" href="*" onClick={this.handleButtonClick}>
           +Click+Me+
         </a>
         <br />
         <br />
-        <a href="*" onClick={this.handleButtonClickDown}>
+        <a className="down" href="*" onClick={this.handleButtonClickDown}>
           -Click-Me-
         </a>
       </div>
