@@ -1,7 +1,9 @@
 import React from 'react';
 import './counter.scss';
 
-
+/**
+ * Counter class which counts up or down
+ */
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -10,16 +12,25 @@ class Counter extends React.Component {
     };
   }
 
+  /**
+ * increases counter
+ */
   handleButtonClick = (e) => {
     e.preventDefault();
     this.setState({ counter: this.state.counter + 1 });
   };
 
+  /**
+   * decreases counter
+   */
   handleButtonClickDown = (e) => {
     e.preventDefault();
     this.setState({ counter: this.state.counter - 1 });
   };
 
+  /**
+   * renders counter
+   */
   render() {
     // eslint-disable-next-line prefer-destructuring
     const counter = this.state.counter;

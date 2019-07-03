@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './header.scss';
 
+/**
+ * Header class which simply contains the header
+ */
 class Header extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     return (
       <header>
