@@ -1,0 +1,30 @@
+@import '../../app.scss';
+
+div{
+
+  .positive {
+    color: blue;
+  }
+  .negative {
+    color: red;
+  }
+  div :hover{
+    background-color: rgb(28, 61, 42);
+  }
+  h4 {
+    padding-left: 10px;
+    max-width: 50px;
+    font-size: 50px;
+    color: rgb(0, 255, 213);
+    font-family: $mainFont;
+    background-color: $backGroundColor;
+    box-shadow: 2px 5px black;
+  }
+  a {
+    max-width: 120px;
+    font-size: 30px;
+    color: rgb(224, 19, 146);
+    font-family: $mainFont;
+    background-color: $backGroundColor;
+  }
+}

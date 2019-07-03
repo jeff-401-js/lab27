@@ -1,0 +1,14 @@
+@import '../../app.scss';
+
+Header {
+  max-width: 350px;
+  height: 100px;
+  font-size: 48px;
+  font-family: $mainFont;
+  color: $mainColor;
+  background-color: $backGroundColor;
+
+  :hover{
+    background-color: rgb(122, 214, 16);
+  }
+}
