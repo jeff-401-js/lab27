@@ -1,29 +1,30 @@
-import React from "react";
+import React from 'react';
 
 
 class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
     };
   }
 
-  handleButtonClick = e => {
+  handleButtonClick = (e) => {
     e.preventDefault();
     this.setState({ counter: this.state.counter + 1 });
   };
 
-  handleButtonClickDown = e => {
+  handleButtonClickDown = (e) => {
     e.preventDefault();
     this.setState({ counter: this.state.counter - 1 });
   };
 
   render() {
-    let counter = this.state.counter;
+    // eslint-disable-next-line prefer-destructuring
+    const counter = this.state.counter;
     let color;
-    let colorRed = { color: "red" };
-    let colorBlue = { color: "blue" };
+    const colorRed = { color: 'red' };
+    const colorBlue = { color: 'blue' };
     if (counter > 0) {
       color = colorBlue;
     } else if (counter < 0) {
