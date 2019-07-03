@@ -1,6 +1,13 @@
 @import '../../app.scss';
 
 div{
+
+  .positive {
+    color: blue;
+  }
+  .negative {
+    color: red;
+  }
   div :hover{
     background-color: rgb(28, 61, 42);
   }

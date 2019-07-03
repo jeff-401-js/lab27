@@ -5,7 +5,7 @@ exports[`<Counter/> Snapshot Test renders correctly 1`] = `
   className="counter"
 >
   <h4
-    className="count"
+    className="count "
   >
     0
   </h4>

@@ -15,9 +15,10 @@ class Counter extends React.Component {
   /**
  * increases counter
  */
-  handleButtonClick = (e) => {
+  handleButtonClickUp = (e) => {
     e.preventDefault();
-    this.setState({ counter: this.state.counter + 1 });
+    this.updateCounter(this.state.counter + 1);
+    // this.setState({ counter: this.state.counter + 1 });
   };
 
   /**
@@ -25,29 +26,32 @@ class Counter extends React.Component {
    */
   handleButtonClickDown = (e) => {
     e.preventDefault();
-    this.setState({ counter: this.state.counter - 1 });
+    this.updateCounter(this.state.counter - 1);
+    // this.setState({ counter: this.state.counter - 1 });
   };
+
+  updateCounter(counter) {
+    let polarity = '';
+
+    if (counter > 0) {
+      polarity = 'positive';
+    } else if (counter < 0) {
+      polarity = 'negative';
+    }
+    this.setState({ counter, polarity });
+  }
 
   /**
    * renders counter
    */
   render() {
-    // eslint-disable-next-line prefer-destructuring
-    const counter = this.state.counter;
-    let color;
-    const colorRed = { color: 'red' };
-    const colorBlue = { color: 'blue' };
-    if (counter > 0) {
-      color = colorBlue;
-    } else if (counter < 0) {
-      color = colorRed;
-    }
+    const classes = ['count', this.state.polarity];
 
     return (
       <div className="counter">
-        <h4 className="count" style={color}>{this.state.counter}</h4>
+        <h4 className={classes.join(' ')}>{this.state.counter}</h4>
         <br />
-        <a className="up" href="*" onClick={this.handleButtonClick}>
+        <a className="up" href="*" onClick={this.handleButtonClickUp}>
           +Click+Me+
         </a>
         <br />
