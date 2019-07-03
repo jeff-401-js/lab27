@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter/> Snapshot Test renders correctly 1`] = `
+<div
+  className="counter"
+>
+  <h4
+    className="count"
+  >
+    0
+  </h4>
+  <br />
+  <a
+    className="up"
+    href="*"
+    onClick={[Function]}
+  >
+    +Click+Me+
+  </a>
+  <br />
+  <br />
+  <a
+    className="down"
+    href="*"
+    onClick={[Function]}
+  >
+    -Click-Me-
+  </a>
+</div>
+`;

@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 import React from 'react';
+import renderer from 'react-test-renderer';
 import Counter from '../../components/Counter/Counter';
+
 
 describe('<Counter /> Enzyme Test', () => {
   it('is alive at application start', () => {
@@ -16,5 +18,22 @@ describe('<Counter /> Enzyme Test', () => {
     expect(wrapper.state('counter')).toBe(1);
     wrapper.find('.up').simulate('click');
     expect(wrapper.state('counter')).toBe(2);
+  });
+
+  it('can count down', () => {
+    const wrapper = mount(<Counter/>);
+
+    wrapper.find('.down').simulate('click');
+    expect(wrapper.state('counter')).toBe(-1);
+    wrapper.find('.down').simulate('click');
+    expect(wrapper.state('counter')).toBe(-2);
+  });
+});
+
+describe('<Counter/> Snapshot Test', () => {
+  it('renders correctly', () => {
+    const component = renderer.create(<Counter/>);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
